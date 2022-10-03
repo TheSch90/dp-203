@@ -1,0 +1,9 @@
+{
+	"name": "dp-203-data-factory-tsch",
+	"location": "germanywestcentral",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "2e673a5c-60dc-439f-9a31-f645d741ccbd",
+		"tenantId": "e55fbc91-d54a-4d1d-bcd2-5a64aea2dee8"
+	}
+}
