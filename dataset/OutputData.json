@@ -9,7 +9,7 @@
 		"type": "AzureSqlTable",
 		"schema": [],
 		"typeProperties": {
-			"schema": "sample-data",
+			"schema": "sampledata",
 			"table": "ouput"
 		}
 	}
