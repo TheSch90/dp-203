@@ -29,7 +29,9 @@
 					"sink": {
 						"type": "AzureSqlSink",
 						"writeBehavior": "insert",
-						"sqlWriterUseTableLock": false
+						"sqlWriterUseTableLock": false,
+						"tableOption": "autoCreate",
+						"disableMetricsCollection": false
 					},
 					"enableStaging": false,
 					"translator": {
@@ -37,10 +39,50 @@
 						"mappings": [
 							{
 								"source": {
-									"name": "name;vorname;alter;familienstand"
+									"name": "name",
+									"type": "String",
+									"physicalType": "String"
 								},
 								"sink": {
-									"name": "name"
+									"name": "name",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "vorname",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "vorname",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "alter",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "alter",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "familienstand",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "familienstand",
+									"type": "String",
+									"physicalType": "String"
 								}
 							}
 						],
