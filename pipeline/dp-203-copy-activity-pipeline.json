@@ -27,15 +27,9 @@
 						}
 					},
 					"sink": {
-						"type": "DelimitedTextSink",
-						"storeSettings": {
-							"type": "AzureBlobFSWriteSettings"
-						},
-						"formatSettings": {
-							"type": "DelimitedTextWriteSettings",
-							"quoteAllText": true,
-							"fileExtension": ".txt"
-						}
+						"type": "AzureSqlSink",
+						"writeBehavior": "insert",
+						"sqlWriterUseTableLock": false
 					},
 					"enableStaging": false,
 					"translator": {
@@ -44,6 +38,9 @@
 							{
 								"source": {
 									"name": "name;vorname;alter;familienstand"
+								},
+								"sink": {
+									"name": "name"
 								}
 							}
 						],
@@ -62,7 +59,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "DelimitedText1",
+						"referenceName": "OutputData",
 						"type": "DatasetReference"
 					}
 				]
