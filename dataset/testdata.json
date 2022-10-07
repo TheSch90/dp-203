@@ -13,14 +13,26 @@
 				"fileName": "testdata.csv",
 				"container": "blob-container1"
 			},
-			"columnDelimiter": ",",
+			"columnDelimiter": ";",
 			"escapeChar": "\\",
 			"firstRowAsHeader": true,
 			"quoteChar": "\""
 		},
 		"schema": [
 			{
-				"name": "name;vorname;alter;familienstand",
+				"name": "name",
+				"type": "String"
+			},
+			{
+				"name": "vorname",
+				"type": "String"
+			},
+			{
+				"name": "alter",
+				"type": "String"
+			},
+			{
+				"name": "familienstand",
 				"type": "String"
 			}
 		]
